@@ -9,10 +9,10 @@ RUN           useradd $Name && echo "$Name:$Pass" |chpasswd  \
               && date > /tmp/report
 COPY          index.html /var/www/html
 ADD           https://www.free-css.com/assets/files/free-css-templates/download/page269/burger-king.zip /var/www/html
-RUN           sed -i "s/Listen 80/LISTEN 8087/g" /etc/httpd/conf/httpd.conf  \
+RUN           sed -i "s/Listen 80/LISTEN 8062/g" /etc/httpd/conf/httpd.conf  \
               && chown apache:apache /var/run/httpd /var/log/httpd  \
               && chmod 777 /var/run/httpd   /var/log/httpd
 USER          $Name
-EXPOSE        8087
+EXPOSE        8062
 WORKDIR       /var/www/html/
 CMD           ["/usr/sbin/httpd", "-D", "FOREGROUND"]
