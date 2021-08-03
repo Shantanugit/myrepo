@@ -1,6 +1,6 @@
 FROM          centos:latest
 LABEL         Name="Shantanu"
-LABEL         Mobile="9818*******"
+LABEL         Mobile="9818******"
 LABEL         Email="shan*****@gmail.com"
 ENV           Name=apache
 ENV           Pass=redhat
